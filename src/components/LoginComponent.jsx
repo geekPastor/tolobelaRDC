@@ -16,26 +16,29 @@ export default function LoginComponent(){
        }
     };
     return(
-        <div className="login-wrapper">
-            {/* <img src={logo} className="tolobelaRDC-logo" /> */}
-            <h1>LoginComponent</h1>
-            <div className="auth-input">
-                <input onChange={(event)=> setCredentails({
-                    ...credentails, email: event.target.value
-                })}
-                type="email" className="common-input"
-                 placeholder="Entrez votre email"/>
-                <br/>
-                <input onChange={(event)=> setCredentails({
-                    ...credentails, password: event.target.value
-                })}
-                type="password" className="common-input"
-                 placeholder="Entrez votre Mot de passe"/>
+        <div className="">
+            <div className="felx h-screen">
+                <img src="../assets/logo.jpg" alt="" />
             </div>
-
-            <button onClick={login} className="login-btn">
+            <div className="bg-white w-full">
+                <h1>LoginComponent</h1>
+                <div className="auth-input">
+                    <input onChange={(event)=> setCredentails({
+                        ...credentails, email: event.target.value
+                    })}
+                    type="email" className="common-input"
+                    placeholder="Entrez votre email"/>
+                    <br/>
+                    <input onChange={(event)=> setCredentails({
+                        ...credentails, password: event.target.value
+                    })}
+                    type="password" className="common-input"
+                    placeholder="Entrez votre Mot de passe"/>
+                </div>
+                <button onClick={login} className="login-btn">
                 Se connecter à tolobelaRDC
-            </button>
+                </button>
+            </div>
         </div>
     )
 }
