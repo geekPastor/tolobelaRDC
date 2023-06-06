@@ -16,25 +16,28 @@ export default function LoginComponent(){
        }
     };
     return(
-        <div className="">
-            <div className="felx h-screen">
-                <img src="../assets/logo.jpg" alt="" />
+        <div className="flex flex-col md:flex-row h-screen items-center">
+            <div className="h-screen md:w-1/2 xl:w-2/3">
+                <img src="../assets/logo.jpg" alt=""  className="w-full h-full object"/>
             </div>
-            <div className="bg-white w-full">
-                <h1>LoginComponent</h1>
-                <div className="auth-input">
-                    <input onChange={(event)=> setCredentails({
-                        ...credentails, email: event.target.value
-                    })}
-                    type="email" className="common-input"
-                    placeholder="Entrez votre email"/>
-                    <br/>
-                    <input onChange={(event)=> setCredentails({
-                        ...credentails, password: event.target.value
-                    })}
-                    type="password" className="common-input"
-                    placeholder="Entrez votre Mot de passe"/>
+            <div className="bg-white w-full md:w-1/2 md:w-1/2 xl:w-1/3">
+                <div className="w-full h-100">
+                    <h1 className="text-red">Login to TolobelaRDC</h1>
+                    <div className="auth-input">
+                        <input onChange={(event)=> setCredentails({
+                            ...credentails, email: event.target.value
+                        })}
+                        type="email" className="common-input"
+                        placeholder="Entrez votre email"/>
+                        <br/>
+                        <input onChange={(event)=> setCredentails({
+                            ...credentails, password: event.target.value
+                        })}
+                        type="password" className="common-input"
+                        placeholder="Entrez votre Mot de passe"/>
+                    </div>
                 </div>
+                
                 <button onClick={login} className="login-btn">
                 Se connecter à tolobelaRDC
                 </button>
