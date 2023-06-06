@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LoginAPI } from "../api/authAPI";
 
-// import { logo } from "../assets/logo.jpg";
+import logo from "../assets/logo.jpg";
 
 import "../Sass/LoginComponent.scss"
 
@@ -17,13 +17,13 @@ export default function LoginComponent(){
     };
     return(
         <div className="flex flex-col md:flex-row h-screen items-center">
-            <div className="h-screen md:w-1/2 xl:w-2/3 lg-block hidden">
-                <img src="../assets/logo.jpg" alt=""  className="w-full h-full object"/>
+            <div className="h-screen md:w-1/2 xl:w-2/3 lg-block">
+                <img src={logo} alt=""  className="w-full h-full object"/>
             </div>
             <div className="bg-white items-center justify-center flex md:mx-auto md:mx-0 md:max-w-md lg:max-w-full  w-full md:w-1/2 xl:w-1/3 px-6 lg:px-16 xl:px-12">
                 <div className="w-full h-100">
-                    <h1 className="text-xl font-bold">Login</h1>
-                    <p className="text-xl md:text-2xl font-bold leading-tightmt-12">Login to your account on tolobelaRDC</p>
+                    <h1 className="text-2xl uppercase text-blue-500 font-bold">tolobela-RDC</h1>
+                    <p className="text-xs md:text-2xl  leading-tightmt-12">Connectez-vous à votre compte</p>
 
                     <div className="mt-6">
                         <div>
