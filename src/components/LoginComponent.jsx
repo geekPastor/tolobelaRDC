@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { LoginAPI } from "../api/authAPI";
 
+import GoogleButton from 'react-google-button';
+
 import logo from "../assets/logo.jpg";
 
 import "../Sass/LoginComponent.scss"
@@ -52,11 +54,7 @@ export default function LoginComponent(){
 
                         <hr className="my-6 border-gray-300 w-full"/>
 
-                        <button type="button" className="w-full block bg-white border-gray-300 hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border">
-                            <div className="flex items-center justify-center">
-                                <span className="ml-4">Login with Google</span>
-                            </div>
-                        </button>
+                        <GoogleButton  className="w-full h-full border-gray-300 font-semibold rounded-lg border text-gray-900 focus:bg-gray-100"/>
 
                         <p>&copy; 2023 Chrinovic Mukeba</p>
                     </div>
