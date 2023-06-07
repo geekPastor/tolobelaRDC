@@ -6,15 +6,16 @@ import GoogleButton from 'react-google-button';
 import logo from "../assets/logo.jpg";
 
 import "../Sass/LoginComponent.scss"
+import { toast } from "react-toastify";
 
 export default function LoginComponent(){
     const [credentails, setCredentails] = useState({});
     const login = async ()=>{
        try {
         let res = await LoginAPI(credentails.email, credentails.password);
-        console.log(res?.user);
+        toast.success('Bon retour sur Tolobela-RDC, content de vous revoir');
        } catch (err) {
-        console.log(err.errors.message);
+        toast.error("S'il vous plait verifier bien vos informations, ou inscrivez-vous d'abord");
        }
     };
     return(
@@ -54,9 +55,15 @@ export default function LoginComponent(){
 
                         <hr className="my-6 border-gray-300 w-full"/>
 
-                        <GoogleButton  className="w-full h-full border-gray-300 font-semibold rounded-lg border text-gray-900 focus:bg-gray-100"/>
 
-                        <p>&copy; 2023 Chrinovic Mukeba</p>
+                        <button className="justify-center align-center w-full">
+                        <GoogleButton  className="mx-auto rounded-2xl border-gray-300 font-semibold rounded-lg border text-gray-900 focus:bg-gray-100"/>
+                        </button>
+                        
+
+                        <p className="mt-4">
+                            Vous n'avez pas de compte ? <span className="text-blue-500 hover:cursor-pointer">Inscrivez-vous</span>
+                        </p>
                     </div>
                 </div>
                 
