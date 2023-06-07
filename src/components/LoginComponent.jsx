@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { LoginAPI } from "../api/authAPI";
-
+import { LoginAPI, GoogleSingInAPI } from "../api/authAPI";
 import GoogleButton from 'react-google-button';
 
 import logo from "../assets/logo.jpg";
@@ -18,6 +17,10 @@ export default function LoginComponent(){
         toast.error("S'il vous plait verifier bien vos informations, ou inscrivez-vous d'abord");
        }
     };
+
+    const googleSignIn = ()=>{
+        let response = GoogleSingInAPI();
+    }
     return(
         <div className="flex flex-col md:flex-row h-screen items-center">
             <div className="h-screen md:w-1/2 xl:w-2/3 lg-block">
@@ -57,7 +60,7 @@ export default function LoginComponent(){
 
 
                         <button className="justify-center align-center w-full">
-                        <GoogleButton  className="mx-auto rounded-2xl border-gray-300 font-semibold rounded-lg border text-gray-900 focus:bg-gray-100"/>
+                        <GoogleButton onClick={googleSignIn}  className="mx-auto rounded-2xl border-gray-300 font-semibold rounded-lg border text-gray-900 focus:bg-gray-100"/>
                         </button>
                         
 
