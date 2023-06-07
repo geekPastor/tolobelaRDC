@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LoginAPI, GoogleSingInAPI } from "../api/authAPI";
+import { RegisterAPI, GoogleSingInAPI } from "../api/authAPI";
 import GoogleButton from 'react-google-button';
 import { useNavigate } from "react-router-dom";
 
@@ -13,8 +13,9 @@ export default function RegisterComponent(){
     const [credentails, setCredentails] = useState({});
     const login = async ()=>{
        try {
-        let res = await LoginAPI(credentails.email, credentails.password);
+        let res = await RegisterAPI(credentails.email, credentails.password);
         toast.success('Bienvenu sur Tolobela-RDC, votre compte a bien été créé !');
+        navigate('/home');
        } catch (err) {
         toast.error("S'il vous plait verifier bien vos informations, ou inscrivez-vous d'abord");
        }
@@ -22,6 +23,7 @@ export default function RegisterComponent(){
 
     const googleSignIn = ()=>{
         let response = GoogleSingInAPI();
+        navigate('/home');
     }
     return(
         <div className="flex flex-col md:flex-row h-screen items-center">

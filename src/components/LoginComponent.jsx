@@ -15,6 +15,7 @@ export default function LoginComponent(){
        try {
         let res = await LoginAPI(credentails.email, credentails.password);
         toast.success('Bon retour sur Tolobela-RDC, content de vous revoir');
+        navigate('/home');
        } catch (err) {
         toast.error("S'il vous plait verifier bien vos informations, ou inscrivez-vous d'abord");
        }
@@ -22,6 +23,7 @@ export default function LoginComponent(){
 
     const googleSignIn = ()=>{
         let response = GoogleSingInAPI();
+        navigate('/home');
     }
     return(
         <div className="flex flex-col md:flex-row h-screen items-center">
