@@ -28,7 +28,7 @@ export default function RegisterComponent(){
     return(
         <div className="flex flex-col md:flex-row h-screen items-center">
             <div className="h-screen md:w-1/2 xl:w-1.5/3 lg-block">
-                <img src={logo} alt=""  className="w-full h-full object"/>
+                <img src={logo} alt=""  className="w-full h-full object-cover"/>
             </div>
             <div className="bg-white items-center justify-center flex md:mx-auto md:mx-0 md:max-w-md lg:max-w-full  w-full md:w-1/2 xl:w-1.1/3 px-6 lg:px-16 xl:px-12">
                 <div className="w-full h-100">

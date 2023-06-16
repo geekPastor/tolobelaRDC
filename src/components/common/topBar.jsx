@@ -9,6 +9,7 @@ import {
 import { IoIosNotificationsOutline } from "react-icons/io"
 
 import user from "../../assets/user.png"
+import logo from "../../assets/logo.jpg"
 
 export default function TopBar(){
 
@@ -18,7 +19,10 @@ export default function TopBar(){
         <div className='shadow-md w-full'>
             <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
                 <div className='cursor-pointer flex items-center'>
-                <img src={user} alt="#" className="object-cover h-14 w-14 rounded-full hover:cursor-pointer"/>
+                <img src={logo} alt="#" className="object-cover h-14 w-14 hover:cursor-pointer"/>
+                <h1 className="text-xl font-bold uppercase">
+                    Tolobela-RDC
+                </h1>
                 </div>
                 
                 <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
@@ -49,4 +53,6 @@ export default function TopBar(){
             </div>
         </div>
     )
+
+    // 2:23:03
 }
